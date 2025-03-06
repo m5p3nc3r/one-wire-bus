@@ -17,8 +17,8 @@ specific device is up the the embedded-hal implementation for that device, but i
 implement both `InputPin` and `OutputPin` 
 
 ```rust
-use embedded_hal::blocking::delay::DelayUs;
-use embedded_hal::digital::v2::{InputPin, OutputPin};
+use embedded_hal::delay::DelayNs;
+use embedded_hal::digital::{InputPin, OutputPin};
 use core::fmt::{Debug, Write};
 use one_wire_bus::OneWire;
 
@@ -46,7 +46,7 @@ fn find_devices<P, E>(
 ```
 
 Example Output
-```
+```bash
 Found device at address E800000B1FCD1028 with family code: 0x28
 Found device at address 70000008AC851628 with family code: 0x28
 Found device at address 0B00000B20687E28 with family code: 0x28

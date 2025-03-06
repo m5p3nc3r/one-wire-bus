@@ -1,5 +1,8 @@
 #![no_std]
 
+#[doc = include_str!("../README.md")]
+
+
 use embedded_hal::delay::DelayNs;
 use embedded_hal::digital::{InputPin, OutputPin};
 
