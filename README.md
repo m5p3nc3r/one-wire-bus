@@ -23,7 +23,7 @@ use core::fmt::{Debug, Write};
 use one_wire_bus::OneWire;
 
 fn find_devices<P, E>(
-    delay: &mut impl DelayUs<u16>,
+    delay: &mut impl DelayNs,
     tx: &mut impl Write,
     one_wire_pin: P,
 )
